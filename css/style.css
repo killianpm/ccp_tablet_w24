@@ -1,0 +1,208 @@
+
+.skip {
+    position: absolute;
+    left: -9999px;
+    display: block;
+    text-align: center;
+}
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+/* new additions based on feedback from mobile assignment */
+ul, ol {
+    margin: 0 2% 0 2%;
+}
+ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+#navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    color: #444;
+    margin: 1%;
+    width: 90%;
+}
+#navbar li {
+    list-style-type: none;
+}
+
+.box {
+    background-color: #383535;
+    /* color: #FFFFFF; */
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 5%;
+    font-size: 1em;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+a:link, a:visited {
+    color: #FFFFFF; /* white text */
+    text-decoration: none;
+}
+
+.active {
+    background-color: blueviolet;
+    color: #FFFFFF; /* white text */
+    border: 3px solid #FFFFFF;
+    text-transform: uppercase;
+}
+
+body {
+    font-size: 1em;
+    font-family: Arial, Verdana;
+    background-color: #000000; /* black background */
+    color: #FFFFFF; /* white text */
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    padding-top: 3%;
+    color: blueviolet;
+}
+h2 {
+    font-size: 2em;
+    text-align: left;
+    padding-top: 3%; 
+    padding-bottom: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+h3 {
+    font-size: 1.5em;
+    text-align: left;
+    padding-top: 2%; 
+    padding-bottom: 1%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+
+p {
+    font-size: 1em;
+    margin: 2% 2% 0 2%;
+    /* margin-top: 1%;
+    margin-left: 2%; */
+}
+
+img {
+    display: block;
+    padding: 5px;
+    margin: 10px;
+    border: 3px solid #FFFFFF;
+    min-width: 15%;
+    max-width: 50%;
+}
+
+div {
+    padding: 10px;
+    max-width: 95%;
+
+}
+
+.img_description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2px;
+    justify-content: left;
+    align-items: center;
+    border: 2px solid white;
+    background-color: blueviolet;
+
+}
+
+.img3_gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    border: 2px solid white;
+    background-color: blueviolet;
+    justify-content: center;
+    align-items: center;
+}
+
+.img4_gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    border: 2px solid white;
+    background-color: blueviolet;
+    justify-content: center;
+    align-items: center;
+}
+
+/* style modifications for the Tablet View */
+@media (min-width: 768px) {
+
+    #navbar {
+        display: flex;
+        justify-content: space-around;
+        /* or flex: 1/auto */
+    }
+    #navbar li {
+        font-size: 1.25em;
+    }
+    box:hover a {
+        background-color: palevioletred;
+    }
+
+    /* hover effect for box border and text in navbar */
+    .box:hover {
+        border: 3px solid turquoise;
+    }
+    #navbar li a:hover {
+        color: turquoise;
+    }
+
+    .img3_gallery, .img4_gallery {
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: auto;
+    }
+    .img3_gallery, .img4_gallery, .img_description {
+        box-shadow: 4px 8px #5a5a5a;
+        margin-bottom: 8px;
+    }
+
+    .petbio {
+        display: flex;
+    }
+    .petbio_img {
+        flex: 2;
+    }
+    .petbio_txt {
+        flex: 1;
+    }
+
+    .travel_imgs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .travel_imgs img {
+        width: 100%;
+    }
+
+
+    /* img {
+        max-width: 200px;
+    } */
+
+}
